@@ -3,12 +3,13 @@ import { Paths } from '@constants/Paths'
 import { Route, Routes } from 'react-router-dom'
 import { Layout } from '@/components/Layout'
 import { NotFoundPage } from '@/components/NotFoundPage'
+import { HomePage } from '@/components/HomePage/HomePage'
 
 const AppRoutes = () => {
   return (
     <Routes>
       <Route path={Paths.home} element={<Layout />}>
-        <Route index element={<div>Home</div>} />
+        <Route index element={<HomePage />} />
         <Route path={Paths.account} element={<div>Account</div>} />
       </Route>
       <Route path={Paths.login} element={<div>Login</div>} />
