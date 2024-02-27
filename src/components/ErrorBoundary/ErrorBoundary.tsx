@@ -31,9 +31,7 @@ class ErrorBoundary extends Component<Props, State> {
   public render() {
     if (this.state.hasError) {
       return (
-        <ContainerBlock
-          sx={{ height: '100%', padding: '60px', paddingTop: '176px', marginTop: '-36px' }}
-        >
+        <ContainerBlock sx={{ padding: '60px' }}>
           <Typography variant='h5' sx={{ textAlign: 'center' }}>
             Упс! Что-то пошло не так
           </Typography>

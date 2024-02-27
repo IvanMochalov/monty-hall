@@ -1,19 +1,21 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
-// import { Footer } from '../Footer'
-// import { Header } from '../Header'
 import { ErrorBoundary } from '../ErrorBoundary'
+import { Header } from '../Header'
+import { Footer } from '../Footer'
 
 export const Layout = () => {
   return (
-    <>
-      {/* <Header /> */}
-      <main style={{ flexGrow: '1' }}>
-        <ErrorBoundary>
-          <Outlet />
-        </ErrorBoundary>
+    <ErrorBoundary>
+      <Header />
+      <main
+        style={{
+          flexGrow: '1',
+        }}
+      >
+        <Outlet />
       </main>
-      {/* <Footer /> */}
-    </>
+      <Footer />
+    </ErrorBoundary>
   )
 }
