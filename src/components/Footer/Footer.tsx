@@ -13,6 +13,7 @@ export const Footer = () => {
         onChange={(_event, newValue) => {
           setValue(newValue)
         }}
+        sx={{ justifyContent: 'space-evenly' }}
       >
         <BottomNavigationAction label='Show' icon={<RestoreIcon />} />
         <BottomNavigationAction label='Statistics' icon={<FavoriteIcon />} />

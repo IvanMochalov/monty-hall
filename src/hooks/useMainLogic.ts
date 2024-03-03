@@ -1,20 +1,21 @@
+import { TDoor } from '@/type'
+
 export const useMainLogic = () => {
-  type Dour = {
-    count: number
-    present: boolean
-  }
-  const arr = [
-    { count: 0, present: true },
-    { count: 1, present: false },
-    { count: 2, present: false },
+  const data = [
+    { count: 0, present: true, isSelected: false, isOpen: false },
+    { count: 1, present: false, isSelected: false, isOpen: false },
+    { count: 2, present: false, isSelected: false, isOpen: false },
   ]
-  function shuffle(array: Dour[]) {
-    for (let i = array.length - 1; i > 0; i--) {
+  const getShuffle = (array: TDoor[]) => {
+    const newArr = array.slice()
+    for (let i = newArr.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1))
-      ;[array[i], array[j]] = [array[j], array[i]]
+      ;[newArr[i], newArr[j]] = [newArr[j], newArr[i]]
     }
+    return newArr
   }
-  shuffle(arr)
-  console.log(arr)
-  return null
+
+  const doorList = getShuffle(data)
+
+  return { doorList }
 }

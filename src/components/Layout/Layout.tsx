@@ -11,6 +11,7 @@ export const Layout = () => {
       <main
         style={{
           flexGrow: '1',
+          overflow: 'hidden',
         }}
       >
         <Outlet />

@@ -7,8 +7,8 @@ import Brightness4Icon from '@mui/icons-material/Brightness4'
 import Brightness7Icon from '@mui/icons-material/Brightness7'
 
 export const Header = () => {
-  const theme = useTheme()
   const colorMode = React.useContext(ColorModeContext)
+  const theme = useTheme()
   return (
     <Box>
       <AppBar position='static'>

@@ -23,9 +23,17 @@
 }
 @keyframes running-contour {
   from {
-    background-position: 0 0, 8px 100%, 0 8px, 100% 0;
+    background-position:
+      0 0,
+      8px 100%,
+      0 8px,
+      100% 0;
   }
   to {
-    background-position: 8px 0, 0 100%, 0 0, 100% 8px;
+    background-position:
+      8px 0,
+      0 100%,
+      0 0,
+      100% 8px;
   }
 }
